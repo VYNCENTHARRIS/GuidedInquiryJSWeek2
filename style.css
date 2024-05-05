@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0; /* Softer gray background for a lighter feel */
+}
+
+#calculator {
+    font-family: 'Arial', sans-serif;
+    background-color: #424242; /* Smoother dark gray for the calculator body */
+    border-radius: 10px;
+    max-width: 100%;
+    width: 350px; /* Default width for desktops */
+    padding: 20px 10px 40px; /* Increased bottom padding for a longer calculator */
+    overflow: hidden;
+}
+
+#display {
+    width: calc(100% - 20px); 
+    padding: 15px; 
+    margin: 10px; 
+    font-size: 2em; /
+    text-align: right;
+    border: 2px solid #616161; 
+    background-color: #757575; 
+    color: #fff; 
+    box-sizing: border-box; 
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    height: 60px; 
+    border-radius: 10px;
+    background-color: #29c4c7; 
+    color: #fff; /* White text for readability */
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d331ce; /* Slightly lighter purple on hover */
+}
+
+.operator-btn {
+    background-color: #b71c1c; /* Darker red for operation buttons */
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 1024px) {
+    #calculator {
+        width: 80%; 
+        font-size: 1.2em;
+    }
+
+    button {
+        height: 70px; 
+        font-size: 1.35em;
+    }
+}
+
+/* Media Queries for Phones */
+@media (max-width: 600px) {
+    #calculator {
+        width: 95%; 
+        font-size: 1em; 
+    }
+
+    button {
+        height: 55px; /* Smaller buttons for phone screens */
+        font-size: 1.2em;
+    }
+}
+
+/* Media Queries for Large Desktops */
+@media (min-width: 1440px) {
+    #calculator {
+        width: 500px; 
+        font-size: 2.2em; 
+    }
+
+    button {
+        height: 80px; 
+        font-size: 2em;
+    }
+}
